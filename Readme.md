@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Mel Watter](https://up.htmlacademy.ru/htmlcss/24/user/958727).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/nikita_rogatnev).
 
 ---
 
