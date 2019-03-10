@@ -7,24 +7,24 @@
 </head>
 
 <body>
-  <header class="index-header">
-    <div class="header-top">
-      <div class="header-top__logo" aria-label="логотип компании Техномарт"><a>Техномарт</a></div>
-      <form class="header-top__form" action="https://echo.htmlacademy.ru" method="post">
-        <label class="header-top__search">
+  <header class="header">
+    <div class="header__container header__container--top">
+      <div class="header__logo" aria-label="логотип компании Техномарт"><a>Техномарт</a></div>
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="search-form__label">
           Поиск
-          <input class="header-top__field" type="text" name="search" id="search" placeholder="Поиск">
+          <input class="search-form__field" type="text" name="search" id="search" placeholder="Поиск">
         </label>
       </form>
-      <div class="header-top__item header-top__item--bookmark"><a href="#">Закладки</a></div>
-      <div class="header-top__item header-top__item--cart"><a href="#">Корзина</a></div>
-      <div class="header-top__item header-top__item--order"><a href="#">Оформить заказ</a></div>
+      <div class="header__link header__link--bookmark"><a href="#">Закладки</a></div>
+      <div class="header__link header__link--cart"><a href="#">Корзина: 10</a></div>
+      <div class="header__link header__link--order"><a href="#">Оформить заказ</a></div>
     </div>
-    <div class="header-middle">
-      <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
-      <div class="header-middle__info">
-        <p class="header-middle__phone">Тел.: <a href="tel:88125550555">+7 (812) 555-05-55</a></p>
-        <p class="header-middle__address">г. Санкт-Петербург, ул. Б. Конюшенная,
+    <div class="header__container header__container--middle">
+      <h1 class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      <div class="header__info">
+        <p class="header__phone">Тел.: <a href="tel:88125550555">+7 (812) 555-05-55</a></p>
+        <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная,
           д. 19/8</p>
       </div>
       <ul class="user-menu">
@@ -33,7 +33,7 @@
       </ul>
     </div>
     <nav class="main-menu">
-      <ul class="main-menu__list list">
+      <ul class="main-menu__list">
         <li class="main-menu__item"><a href="#">Главная</a></li>
         <li class="main-menu__item"><a href="#">Компания</a></li>
         <li class="main-menu__item"><a href="#">Каталог</a></li>
@@ -44,10 +44,10 @@
       </ul>
     </nav>
   </header>
-  <main>
+  <main class="index-container">
     <section class="offers">
       <h2 class="offers__title visually-hidden">Категории товаров и услуг</h2>
-      <ul class="products list">
+      <ul class="products">
         <li class="products__item">
           <div class="products__wrapper">
             <h3>Материалы</h3>
@@ -75,15 +75,15 @@
         <div class="slider__slide slider__slide--drills">
           <h3>Дрели</h3>
           <p>Соседям на радость!</p>
-          <a href="#" class="button">Открыть каталог</a>
+          <a href="#" class="index-button">Открыть каталог</a>
         </div>
         <div class="slider__slide slider__slide--perforators">
           <h3>Перфораторы</h3>
           <p>Настоящие мужские игрушки</p>
-          <a href="catalog.html" class="button">Открыть каталог</a>
+          <a href="catalog.html" class="index-button">Открыть каталог</a>
         </div>
       </section>
-      <ul class="services-list list">
+      <ul class="services-list">
         <li class="services-list__item">
           <div class="products__wrapper">
             <h3>Скидки 50%</h3>
@@ -103,7 +103,7 @@
       <section class="popular__goods">
         <div class="popular__title-wrapper">
           <h3 class="popular__title popular">Популярные товары:</h3>
-          <a href="#" class="popular__button button">Все популярные товары</a>
+          <a href="#" class="popular__button index-button">Все популярные товары</a>
         </div>
         <div class="popular__cards">
           <article class="card">
@@ -112,7 +112,7 @@
               <a href="#" class="card__button card__button--bkm">В закладки</a>
             </div>
             <img src="#" alt="Перфоратор BOSCH BFG 9000" width="218" height="170">
-            <h4>Перфоратор BOSCH BFG 9000</h4>
+            <h3>Перфоратор BOSCH BFG 9000</h3>
             <span class="card__old-price">32500 Р.</span>
             <span class="card__new-price">25500 Р.</span>
           </article>
@@ -122,7 +122,7 @@
               <a href="#" class="card__button card__button--bkm">В закладки</a>
             </div>
             <img src="#" alt="Перфоратор BOSCH BFG 3000" width="218" height="170">
-            <h4>Перфоратор BOSCH BFG 3000</h4>
+            <h3>Перфоратор BOSCH BFG 3000</h3>
             <span class="card__old-price">22500 Р.</span>
             <span class="card__new-price">15500 Р.</span>
           </article>
@@ -132,7 +132,7 @@
               <a href="#" class="card__button card__button--bkm">В закладки</a>
             </div>
             <img src="#" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
-            <h4>Перфоратор BOSCH BFG 6000</h4>
+            <h3>Перфоратор BOSCH BFG 6000</h3>
             <span class="card__old-price">30500 Р.</span>
             <span class="card__new-price">25500 Р.</span>
           </article>
@@ -142,7 +142,7 @@
               <a href="#" class="card__button card__button--bkm">В закладки</a>
             </div>
             <img src="#" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
-            <h4>Перфоратор BOSCH BFG 2000</h4>
+            <h3>Перфоратор BOSCH BFG 2000</h3>
             <span class="card__new-price">12500 Р.</span>
           </article>
         </div>
@@ -150,9 +150,9 @@
       <section class="popular__producers">
         <div class="popular__title-wrapper">
           <h2 class="popular__title">Популярные производители:</h2>
-          <a href="#" class="popular__button button"></a>
+          <a href="#" class="popular__button index-button"></a>
         </div>
-        <ul class="producers-list list">
+        <ul class="producers-list">
           <li class="producers-list__item"><img src="#" alt="Bosh" width="126" height="37"></li>
           <li class="producers-list__item"><img src="#" alt="Makita" width="123" height="40"></li>
           <li class="producers-list__item"><img src="#" alt="DeWalt" width="146" height="44"></li>
@@ -206,7 +206,7 @@
             Залезть в долговую яму стало проще!
             Кредитные консультанты придут вам на помощь.
           </p>
-          <a href="#" class="services__button button">Отправить заявку</a>
+          <a href="#" class="services__button index-button">Отправить заявку</a>
         </li>
       </ul>
     </section>
@@ -228,38 +228,37 @@
         <a href="#" class="info__button info__button--more">Подробнее о компании</a>
       </section>
       <section class="contacts">
-        <h3 class="info__title">Контакты</h3>
+        <h3 class="contacts__title">Контакты</h3>
         <p>Вы можете забрать товар сами,
           заехав в наш офис:</p>
-        <a href="map.html" class="info__map"><img src="#" alt="Санкт-Петербург, ул. Б. Конюшенная, 19/8" width="300"
+        <a href="map.html" class="contacts__map"><img src="#" alt="Санкт-Петербург, ул. Б. Конюшенная, 19/8" width="300"
             height="158"></a>
-        <a href="" class="info__button info__button--write-us button">Заблудились? Напишите нам!</a>
+        <a href="#" class="contacts__button contacts__button--write-us index-button">Заблудились? Напишите нам!</a>
       </section>
     </section>
   </main>
   <footer class="footer">
-    <div class="footer-top">
-      <div class="footer-top__centerer">
-        <section class="footer-top__info">
+    <div class="footer__container footer__container--top">
+      <div class="footer__wrapper">
+        <section class="footer__info">
           <h2 class="visually-hidden">Контакты</h2>
-          <div class="footer-top__logo" aria-label="логотип компании Техномарт"><a>Техномарт</a></div>
-          <div class="footer-top__contacts">
-            <p class="footer-top__address">г. Санкт-Петербург, ул. Б.
+          <div class="footer__logo" aria-label="логотип компании Техномарт"><a>Техномарт</a></div>
+          <div class="footer__contacts">
+            <p class="footer__address">г. Санкт-Петербург, ул. Б.
               Конюшенная, д. 19/8</p>
-            <p class="footer-top__phone"><a href="tel:88125550555">+7 (812) 555-05-55</a></p>
+            <p class="footer__phone"><a href="tel:88125550555">+7 (812) 555-05-55</a></p>
           </div>
-
         </section>
-        <section class="footer-top__menu">
+        <section class="footer__menu">
           <h2 class="visually-hidden">Меню</h2>
-          <ul class="footer-top__main-nav">
+          <ul class="footer__main-nav">
             <li><a href="#">Компания</a></li>
             <li><a href="#">Новости</a></li>
             <li><a href="#">Каталог</a></li>
             <li><a href="#">Доставка</a></li>
             <li><a href="#">Контакты</a></li>
           </ul>
-          <ul class="footer-top__offers-nav">
+          <ul class="footer__offers-nav">
             <li><a href="#">Материалы</a></li>
             <li><a href="#">Техника</a></li>
             <li><a href="#">Инструмент</a></li>
@@ -269,16 +268,16 @@
       </div>
     </div>
 
-    <div class="footer-bottom">
-      <div class="footer-bottom__centerer">
-        <p class="footer-bottom__copyright">© 2010–2017 Компания «Техномарт»
+    <div class="footer__container footer__container--bottom">
+      <div class="footer__wrapper">
+        <p class="footer__copyright">© 2010–2017 Компания «Техномарт»
           Все права защищены</p>
-        <ul class="footer-bottom__social">
-          <li><a href="#" class="footer-bottom__social-link"><img src="#" alt="техномарт vkontakte"></a></li>
-          <li><a href="#" class="footer-bottom__social-link"><img src="#" alt="техномарт на facebook"></a></li>
-          <li><a href="#" class="footer-bottom__social-link"><img src="#" alt="техномарт в instagram"></a></li>
+        <ul class="social">
+          <li><a href="#" class="social__link"><img src="#" alt="техномарт vkontakte"></a></li>
+          <li><a href="#" class="social__link"><img src="#" alt="техномарт на facebook"></a></li>
+          <li><a href="#" class="social__link"><img src="#" alt="техномарт в instagram"></a></li>
         </ul>
-        <div class="footer-bottom__developer">
+        <div class="footer__developer">
           <p>Обратная связь:<a href="https://htmlacademy.ru/contacts">mail@htmlacademy.ru</a></p>
           <p>Разработано — <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
         </div>
@@ -291,22 +290,22 @@
   </section>
   <section class="modal modal--letter">
     <h2 class="visually-hidden">Форма отправки письма</h2>
-    <form class="modal--letter__form" action="https://echo.htmlacademy.ru" method="POST">
-      <p class="modal--letter__item">
-        <label class="modal--letter__label" for="username">Ваше имя:</label>
-        <input class="modal--letter__field" type="text" name="username" id="username"
+    <form class="letter-form" action="https://echo.htmlacademy.ru" method="POST">
+      <p class="letter-form__item">
+        <label class="letter-form__label" for="username">Ваше имя:</label>
+        <input class="letter-form__field" type="text" name="username" id="username"
           pattern="[A-Za-zА-Яа-яЁё]{2,20} [A-Za-zА-Яа-яЁё]{2,20}" placeholder="Имя Фамилия">
       </p>
-      <p class="modal--letter__item">
-        <label class="modal--letter__label" for="usermail">Ваш e-mail:</label>
-        <input class="modal--letter__field" type="email" name="usermail" id="usermail" placeholder="email@example.com">
+      <p class="letter-form__item">
+        <label class="letter-form__label" for="usermail">Ваш e-mail:</label>
+        <input class="letter-form__field" type="email" name="usermail" id="usermail" placeholder="email@example.com">
       </p>
-      <p class="modal--letter__item">
-        <label class="modal--letter__label" for="usertext">Текст письма:</label>
-        <textarea class="modal--letter__field" name="usertext" id="usertext" cols="30" rows="10"
+      <p class="letter-form__item">
+        <label class="letter-form__label" for="usertext">Текст письма:</label>
+        <textarea class="letter-form__field" name="usertext" id="usertext" cols="30" rows="10"
           placeholder="В свободной форме"></textarea>
       </p>
-      <button class="modal--letter__submit-btn button" type="submit">Отправить</button>
+      <button class="letter-form__submit-btn index-button" type="submit">Отправить</button>
     </form>
     <button class="modal__close-button" aria-label="Закрыть окно"></button>
   </section>
