@@ -173,7 +173,7 @@ input[type="radio"].visually-hidden {
 
 .header__wrapper{
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   max-width: 960px;
   margin: 0 auto;
@@ -214,7 +214,7 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  width: 262px;
+  width: 270px;
 }
 
 .search-form__label{
@@ -277,6 +277,10 @@ input[type="radio"].visually-hidden {
   text-align: center;
   line-height: 1;
   color: #ffffff;
+}
+
+.header__link--bookmark{
+  padding-right: 10px;
 }
 
 .header__link--cart{
