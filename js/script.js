@@ -1,5 +1,31 @@
-var write_us = document.querySelector(".button--letter");
+var buy_links = document.querySelectorAll(".card__button--buy");
+var purchase = document.querySelector(".modal--purchase");
+var close_purchase = purchase.querySelector(".modal__close-button");
+
+buy_links.forEach(function (button) {
+  button.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    purchase.classList.add("modal__show");
+  })
+});
+
+close_purchase.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  purchase.classList.remove("modal__show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (purchase.classList.contains("modal__show")) {
+      purchase.classList.remove("modal__show");
+    }
+  }
+});
+
 var popup_letter = document.querySelector(".modal--letter");
+
+var write_us = document.querySelector(".button--letter");
 var close_letter = popup_letter.querySelector(".modal__close-button");
 var user_name = popup_letter.querySelector("[name=username]");
 var form = popup_letter.querySelector("form");
@@ -15,6 +41,7 @@ try {
 } catch (error) {
   is_storage_support = false;
 }
+
 
 write_us.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -66,9 +93,11 @@ window.addEventListener("keydown", function (evt) {
 
 });
 
-var map_link = document.querySelector(".info__map");
 var map = document.querySelector(".modal--map");
+
+var map_link = document.querySelector(".info__map");
 var close_map = map.querySelector(".modal__close-button");
+
 
 map_link.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -92,28 +121,3 @@ window.addEventListener("keydown", function (evt) {
 
 
 
-var buy_links = document.querySelectorAll(".card__button--buy");
-var purchase = document.querySelector(".modal--purchase");
-var close_purchase = purchase.querySelector(".modal__close-button");
-
-
-buy_links.forEach(function (button) {
-  button.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    purchase.classList.add("modal__show");
-  })
-});
-
-close_purchase.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  purchase.classList.remove("modal__show");
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (purchase.classList.contains("modal__show")) {
-      purchase.classList.remove("modal__show");
-    }
-  }
-});
