@@ -1443,6 +1443,7 @@ input[type="radio"].visually-hidden {
   margin-left: 80px;
   padding: 0;
   width: 620px;
+  min-height: 199px;
 
   text-align: left;
 
@@ -1482,7 +1483,7 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: 21px;
+  top: 11px;
   right: 0px;
 
   display: block;
