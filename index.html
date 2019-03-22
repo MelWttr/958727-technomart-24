@@ -20,20 +20,20 @@
           </a>
         </div>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <input class="search-form__field" type="text" name="search" id="search" placeholder="Поиск:">
           <label class="search-form__label" for="search" aria-label="Поиск">
             <svg class="search-form__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17">
               <path fill="#ffffff"
                 d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
             </svg>
           </label>
-          <input class="search-form__field" type="text" name="search" id="search" placeholder="Поиск:">
         </form>
         <a class="header__link header__link--bookmark" href="#">
           <svg class="header__icon header__icon--bkm" xmlns="http://www.w3.org/2000/svg" width="14" height="16">
             <path fill="#ffffff"
               d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z" />
           </svg>
-          Закладки</a>
+          Закладки: 0</a>
 
         <a class="header__link header__link--cart" href="#">
           <svg class="header__icon header__icon--cart" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
@@ -46,7 +46,8 @@
     </div>
 
     <div class="header__container header__container--bottom">
-      <p class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <p class="header__title">Интернет-магазин строительных материалов
+        и&nbsp;инструментов для ремонта</p>
       <div class="header__contacts">
         <a class="header__phone" href="tel:88125550555">
           <svg class="header__icon header__icon--phone" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
@@ -60,8 +61,8 @@
       <div class="user-menu">
         <a href="#" class="user-menu__link user-menu__link--login">
           <svg class="user-menu__icon user-menu__icon--login" xmlns="http://www.w3.org/2000/svg" width="20" height="17">
-            <path fill="#32425C" d="M14.875 8.5L6 0v6H0v5h6v6z" />
-            <path fill="#32425C"
+            <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z" />
+            <path fill="#c5c5c5"
               d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" />
           </svg>
           Войти</a>
@@ -86,7 +87,7 @@
     <section class="offers">
       <h2 class="offers__title visually-hidden">Категории товаров и услуг</h2>
       <ul class="product-list product-list--goods">
-        <li class="product-list__item">
+        <li class="product-list__item product-list__item--materials">
           <div class="product-list__wrapper">
             <h3 class="product-list__title">Материалы</h3>
             <a href="#" class="button button--half-transparent">на любой вкус</a>
@@ -101,7 +102,7 @@
           </svg>
           <span class="card__new">Новинка</span>
         </li>
-        <li class="product-list__item">
+        <li class="product-list__item product-list__item--instrument">
           <div class="product-list__wrapper">
             <h3 class="product-list__title">Инструмент</h3>
             <a href="#" class="button button--half-transparent">на все случаи</a>
@@ -114,7 +115,7 @@
           </svg>
           <span class="card__new">Новинка</span>
         </li>
-        <li class="product-list__item">
+        <li class="product-list__item product-list__item--equipment">
           <div class="product-list__wrapper">
             <h3 class="product-list__title">Техника</h3>
             <a href="#" class="button button--half-transparent">для стройки</a>
@@ -132,10 +133,12 @@
       </ul>
       <div class="offers__wrapper">
         <section class="slider">
-          <input class="slider__switcher visually-hidden" type="radio" id="switcher-left">
-          <input class="slider__switcher visually-hidden" type="radio" id="switcher-right">
-          <label for="switcher-left" class="slider__slider-btn">Влево</label>
-          <label for="switcher-right" class="slider__slider-btn">Вправо</label>
+          <input class="slider__switcher visually-hidden" name="switcher" type="radio" id="switcher-left" checked>
+          <input class="slider__switcher visually-hidden" name="switcher" type="radio" id="switcher-right">
+          <label for="switcher-left" class="slider__slider-btn slider__slider-btn--left">Влево</label>
+          <label for="switcher-right" class="slider__slider-btn slider__slider-btn--right">Вправо</label>
+          <label for="switcher-left" class="slider__slider-crcl slider__slider-crcl--left">Влево</label>
+          <label for="switcher-right" class="slider__slider-crcl slider__slider-crcl--right">Вправо</label>
           <div class="slider__slide slider__slide--drills">
             <div class="slider__text">
               <h3 class="slider__title">Дрели</h3>
@@ -153,7 +156,7 @@
         </section>
 
         <ul class="product-list product-list--services">
-          <li class="product-list__item">
+          <li class="product-list__item product-list__item--discounts">
             <div class="product-list__wrapper">
               <h3 class="product-list__title">Скидки 50%</h3>
               <a href="#" class="button button--half-transparent">На 350 товаров</a>
@@ -170,7 +173,7 @@
             </svg>
             <span class="card__new">Новинка</span>
           </li>
-          <li class="product-list__item">
+          <li class="product-list__item product-list__item--delivery">
             <div class="product-list__wrapper">
               <h3 class="product-list__title">Доставка</h3>
               <a href="#" class="button button--half-transparent">бесплатно</a>
@@ -205,7 +208,12 @@
           <span class="card__old-price">32500 Р.</span>
           <span class="card__new-price">25500 Р.</span>
           <div class="card__buttons">
-            <a href="#" class="card__button card__button--buy">Купить</a>
+            <a href="#" class="card__button card__button--buy">
+              <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+              Купить</a>
             <a href="#" class="card__button card__button--bkm">В закладки</a>
           </div>
           <span class="card__new">Новинка</span>
@@ -216,7 +224,12 @@
           <span class="card__old-price">22500 Р.</span>
           <span class="card__new-price">15500 Р.</span>
           <div class="card__buttons">
-            <a href="#" class="card__button card__button--buy">Купить</a>
+            <a href="#" class="card__button card__button--buy">
+              <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+              Купить</a>
             <a href="#" class="card__button card__button--bkm">В закладки</a>
           </div>
           <span class="card__new">Новинка</span>
@@ -227,18 +240,28 @@
           <span class="card__old-price">30500 Р.</span>
           <span class="card__new-price">25500 Р.</span>
           <div class="card__buttons">
-            <a href="#" class="card__button card__button--buy">Купить</a>
+            <a href="#" class="card__button card__button--buy">
+              <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+              Купить</a>
             <a href="#" class="card__button card__button--bkm">В закладки</a>
           </div>
           <span class="card__new">Новинка</span>
         </article>
-        <article class="card">
+        <article class="card card--new">
           <img src="img/bosh_2000.png" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
           <h3 class="card__title">Перфоратор BOSCH BFG 2000</h3>
           <span class="card__old-price"></span>
           <span class="card__new-price">12500 Р.</span>
           <div class="card__buttons">
-            <a href="#" class="card__button card__button--buy">Купить</a>
+            <a href="#" class="card__button card__button--buy">
+              <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+              Купить</a>
             <a href="#" class="card__button card__button--bkm">В закладки</a>
           </div>
           <span class="card__new">Новинка</span>
@@ -253,17 +276,24 @@
       </div>
 
       <ul class="producers">
-        <li class="producers__item"><a href="#"><img src="img/bosch.png" alt="Bosh" width="126" height="37"></a></li>
-        <li class="producers__item"><a href="#"><img src="img/makita.png" alt="Makita" width="123" height="40"></a></li>
-        <li class="producers__item"><a href="#"><img src="img/de_walt.png" alt="DeWalt" width="146" height="44"></a>
+        <li class="producers__item"><a class="producers__link" href="#"><img src="img/bosch.png" alt="Bosh" width="126"
+              height="37"></a></li>
+        <li class="producers__item"><a class="producers__link" href="#"><img src="img/makita.png" alt="Makita"
+              width="123" height="40"></a></li>
+        <li class="producers__item"><a class="producers__link" href="#"><img src="img/de_walt.png" alt="DeWalt"
+              width="146" height="44"></a>
         </li>
-        <li class="producers__item"><a href="#"><img src="img/interscol.png" alt="Интерскол" width="200"
-              height="88"></a></li>
-        <li class="producers__item"><a href="#"><img src="img/hitachi.png" alt="Hitachi" width="169" height="31"></a>
+        <li class="producers__item"><a class="producers__link" href="#"><img src="img/interscol.png" alt="Интерскол"
+              width="200" height="88"></a></li>
+        <li class="producers__item"><a class="producers__link" href="#"><img src="img/hitachi.png" alt="Hitachi"
+              width="169" height="31"></a>
         </li>
-        <li class="producers__item"><a href="#"><img src="img/lg.png" alt="LG" width="121" height="73"></a></li>
-        <li class="producers__item"><a href="#"><img src="img/aeg.png" alt="AEG" width="151" height="96"></a></li>
-        <li class="producers__item"><a href="#"><img src="img/metabo.png" alt="Metabo" width="204" height="69"></a></li>
+        <li class="producers__item"><a class="producers__link" href="#"><img src="img/lg.png" alt="LG" width="121"
+              height="73"></a></li>
+        <li class="producers__item"><a class="producers__link" href="#"><img src="img/aeg.png" alt="AEG" width="151"
+              height="96"></a></li>
+        <li class="producers__item"><a class="producers__link" href="#"><img src="img/metabo.png" alt="Metabo"
+              width="204" height="69"></a></li>
       </ul>
     </section>
     <section class="services">
@@ -274,9 +304,12 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
         <div class="services__container">
-          <input type="radio" class="services__radio visually-hidden" id="services__radio--delivery">
-          <input type="radio" class="services__radio visually-hidden" id="services__radio--warranty">
-          <input type="radio" class="services__radio visually-hidden" id="services__radio--credit">
+          <input type="radio" class="services__radio visually-hidden" id="services__radio--delivery"
+            name="services__radio" checked>
+          <input type="radio" class="services__radio visually-hidden" id="services__radio--warranty"
+            name="services__radio">
+          <input type="radio" class="services__radio visually-hidden" id="services__radio--credit"
+            name="services__radio">
           <ul class="services__switchers">
             <li class="services__item"><label for="services__radio--delivery"
                 class="services__switcher services__switcher--delivery">Доставка</label></li>
@@ -346,7 +379,7 @@
           заехав в наш офис:</p>
         <a href="map.html" class="info__map"><img src="img/map.jpg" alt="Санкт-Петербург, ул. Б. Конюшенная, 19/8"
             width="300" height="158"></a>
-        <a href="#" class="button button--accent">Заблудились? Напишите нам!</a>
+        <a href="#" class="button button--accent button--letter">Заблудились? Напишите нам!</a>
       </section>
     </section>
   </main>
@@ -356,7 +389,7 @@
         <section class="footer__info">
           <h2 class="visually-hidden">Контакты</h2>
           <div class="logo logo--big">
-            <a href="index.html" class="logo__link" aria-label="логотип компании Техномарт">
+            <a class="logo__link" aria-label="логотип компании Техномарт">
               <svg class="footer__icon footer__icon--logo" xmlns="http://www.w3.org/2000/svg" width="138" height="23">
                 <path fill-rule="evenodd" fill="#FFF"
                   d="M132.538 3.057v18.9h-2.7v-18.9h-4.8v-2.1h12.3v2.1h-4.8zm-10.395 11.115c-.47.59-1.06 1.01-1.77 1.26s-1.555.375-2.535.375c-.46 0-.98-.03-1.56-.09-.58-.06-1.06-.13-1.44-.21v6.45h-2.7v-20.7c.76-.22 1.525-.375 2.295-.465.77-.09 1.605-.135 2.505-.135 1.2 0 2.22.125 3.06.375.84.25 1.52.665 2.04 1.245.52.58.9 1.35 1.14 2.31.24.96.36 2.15.36 3.57 0 1.46-.115 2.68-.345 3.66-.23.98-.58 1.765-1.05 2.355zm-1.53-8.715c-.15-.72-.385-1.29-.705-1.71a2.55 2.55 0 0 0-1.215-.885c-.49-.17-1.075-.255-1.755-.255h-2.1v11.1h2.1c.68 0 1.265-.085 1.755-.255a2.55 2.55 0 0 0 1.215-.885c.32-.42.555-.99.705-1.71.15-.72.225-1.62.225-2.7s-.075-1.98-.225-2.7zm-15.225 11.1h-6l-1.35 5.4h-2.7l5.1-21h3.9l5.1 21h-2.7l-1.35-5.4zm-2.94-12.6h-.12l-2.49 10.5h5.1l-2.49-10.5zm-12.96 2.4h-.149l-4.351 12.9h-2.699l-4.351-12.9h-.15l-.9 15.6h-2.7l1.2-21h3.3l4.89 14.4h.12l4.89-14.4h3.301l1.199 21h-2.7l-.9-15.6zm-20.16 13.65c-.56.82-1.235 1.4-2.024 1.74-.791.34-1.696.51-2.716.51-1.019 0-1.925-.17-2.715-.51-.79-.34-1.465-.92-2.025-1.74-.56-.82-.985-1.925-1.275-3.315-.29-1.39-.435-3.135-.435-5.235 0-2.1.145-3.845.435-5.235.29-1.39.715-2.495 1.275-3.315.56-.82 1.235-1.4 2.025-1.74.79-.34 1.696-.51 2.715-.51 1.02 0 1.925.17 2.716.51.789.34 1.464.92 2.024 1.74s.985 1.925 1.275 3.315c.29 1.39.436 3.135.436 5.235 0 2.1-.146 3.845-.436 5.235-.29 1.39-.715 2.495-1.275 3.315zm-1.304-12.99c-.211-1.16-.486-2.08-.826-2.76-.34-.68-.74-1.15-1.2-1.41-.46-.26-.93-.39-1.41-.39-.479 0-.95.13-1.409.39-.461.26-.861.73-1.201 1.41-.34.68-.614 1.6-.825 2.76-.21 1.16-.314 2.64-.314 4.44 0 1.8.104 3.28.314 4.44.211 1.16.485 2.08.825 2.76.34.68.74 1.15 1.201 1.41.459.26.93.39 1.409.39.48 0 .95-.13 1.41-.39.46-.26.86-.73 1.2-1.41.34-.68.615-1.6.826-2.76.21-1.16.314-2.64.314-4.44 0-1.8-.104-3.28-.314-4.44zm-16.185 5.34h-6.301v9.6h-2.699v-21h2.699v9.3h6.301v-9.3h2.699v21h-2.699v-9.6zm-14.25 9.6l-3.75-9-3.75 9h-2.7l4.5-10.8-4.05-10.2h2.7l3.3 8.4 3.3-8.4h2.7l-4.05 10.2 4.5 10.8h-2.7zm-22.05-21h10.2v2.1h-7.5v6.9h6.6v2.1h-6.6v7.8h7.5v2.1h-10.2v-21zm-7.2 21h-2.7v-18.9h-4.8v-2.1h12.3v2.1h-4.8v18.9z" />
@@ -375,7 +408,7 @@
           <ul class="detailed-menu__main">
             <li class="detailed-menu__item"><a href="#" class="detailed-menu__link">Компания</a></li>
             <li class="detailed-menu__item"><a href="#" class="detailed-menu__link">Новости</a></li>
-            <li class="detailed-menu__item"><a href="#" class="detailed-menu__link">Каталог</a></li>
+            <li class="detailed-menu__item"><a href="catalog.html" class="detailed-menu__link">Каталог</a></li>
             <li class="detailed-menu__item"><a href="#" class="detailed-menu__link">Доставка</a></li>
             <li class="detailed-menu__item"><a href="#" class="detailed-menu__link">Контакты</a></li>
           </ul>
@@ -424,6 +457,12 @@
   <section class="modal modal--map">
     <h2 class="visually-hidden">Окно с картой месторасположения</h2>
     <button class="modal__close-button" aria-label="Закрыть окно"></button>
+    <iframe class="iframe"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1295.9149507489997!2d30.322341502005855!3d59.939209627958526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1553206771517"
+      width="940" height="446" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <div class="map-picture">
+      <img src="img/map_large.jpg" width="940" height="446" alt="Москва, улица Строителей 15">
+    </div>
   </section>
   <section class="modal modal--letter">
     <h2 class="visually-hidden">Форма отправки письма</h2>
@@ -443,12 +482,24 @@
         <textarea class="letter-form__field letter-form__field--text" name="usertext" id="usertext" cols="30" rows="10"
           placeholder="В свободной форме"></textarea>
       </p>
-      <div class="modal__wrapper">
+      <div class="modal__wrapper modal__wrapper--letter">
         <button class="button button--accent" type="submit">Отправить</button>
       </div>
     </form>
     <button class="modal__close-button" aria-label="Закрыть окно"></button>
   </section>
+
+  <section class="modal modal--purchase">
+    <h2 class="visually-hidden">Действия с заказом</h2>
+    <p class="modal__text">Товар добавлен в корзину!</p>
+    <div class="modal__wrapper modal__wrapper--purchase">
+      <a href="#" class="button button--accent">Оформить заказ</a>
+      <button class="button button--transparent">Продолжить покупки</button>
+    </div>
+    <button class="modal__close-button" aria-label="Закрыть окно"></button>
+  </section>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -19,20 +19,20 @@
             </svg>
           </a></div>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <input class="search-form__field" type="text" name="search" id="search" placeholder="Поиск:">
           <label class="search-form__label" for="search" aria-label="Поиск">
             <svg class="search-form__icon" xmlns="http://www.w3.org/2000/svg" width="17" height="17">
               <path fill="#ffffff"
                 d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
             </svg>
           </label>
-          <input class="search-form__field" type="text" name="search" id="search" placeholder="Поиск:">
         </form>
         <a class="header__link header__link--bookmark" href="#">
           <svg class="header__icon header__icon--bkm" xmlns="http://www.w3.org/2000/svg" width="14" height="16">
             <path fill="#ffffff"
               d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z" />
           </svg>
-          Закладки</a>
+          Закладки: 0</a>
         <a href="#" class="header__link header__link--cart header__link--cart--active">
           <svg class="header__icon header__icon--cart" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
             <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
@@ -43,7 +43,8 @@
       </div>
     </div>
     <div class="header__container header__container--bottom">
-      <p class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</p>
+      <p class="header__title">Интернет-магазин строительных материалов
+        и&nbsp;инструментов для ремонта</p>
       <div class="header__contacts">
         <a class="header__phone" href="tel:88125550555">
           <svg class="header__icon header__icon--phone" xmlns="http://www.w3.org/2000/svg" width="19" height="19">
@@ -59,14 +60,14 @@
           <a href="#" class="user-menu__link user-menu__link--user">
             <svg class="user-menu__icon user-menu__icon--user" xmlns="http://www.w3.org/2000/svg" width="20"
               height="18">
-              <path fill="#32425C"
+              <path fill="#c5c5c5"
                 d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z" />
             </svg>
             Равшан Джамшутович</a>
-          <a href="#" class="user-menu__link user-menu__link--user" aria-label="выход">
+          <a href="#" class="user-menu__link user-menu__link--logout" aria-label="выход">
             <svg class="user-menu__icon user-menu__icon--logout" xmlns="http://www.w3.org/2000/svg" width="21"
               height="17">
-              <g fill="#32425C">
+              <g fill="#c5c5c5">
                 <path d="M21 8.5L12.125 0v6h-6v5h6v6z" />
                 <path
                   d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z" />
@@ -113,7 +114,7 @@
       </ol>
 
       <h1 class="main__title">Перфораторы</h1>
-      <div class="main-container">
+      <div class="main__container">
         <aside class="filter">
           <h2 class="filter__header">Фильтр:</h2>
           <form class="filter-form" action="https://echo.htmlacademy.ru" method="POST">
@@ -138,12 +139,12 @@
             <fieldset class="filter-form__item">
               <legend class="filter-form__title">Производители:</legend>
               <label class="checkbox">
-                <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox-1" disabled checked>
+                <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox-1" disabled>
                 <span class="checkbox__icon"></span>
                 Bosh
               </label>
               <label class="checkbox">
-                <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox-2" disabled>
+                <input class="checkbox__input visually-hidden" type="checkbox" name="checkbox-2" disabled checked>
                 <span class="checkbox__icon"></span>
                 Интерскол
               </label>
@@ -166,12 +167,12 @@
             <fieldset class="filter-form__item">
               <legend class="filter-form__title">Питание:</legend>
               <label class="radiobutton">
-                <input type="radio" class="radiobutton__input visually-hidden" name="power-type" disabled checked>
+                <input type="radio" class="radiobutton__input visually-hidden" name="power-type" checked>
                 <span class="radiobutton__icon"></span>
                 Аккумуляторные
               </label>
               <label class="radiobutton">
-                <input type="radio" class="radiobutton__input visually-hidden" name="power-type">
+                <input type="radio" class="radiobutton__input visually-hidden" name="power-type" disabled>
                 <span class="radiobutton__icon"></span>
                 Сетевые
               </label>
@@ -210,7 +211,12 @@
               <span class="card__old-price">22500 Р.</span>
               <span class="card__new-price">15500 Р.</span>
               <div class="card__buttons">
-                <a href="#" class="card__button card__button--buy">Купить</a>
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
                 <a href="#" class="card__button card__button--bkm">В закладки</a>
               </div>
               <span class="card__new">Новинка</span>
@@ -221,18 +227,28 @@
               <span class="card__old-price">30500 Р.</span>
               <span class="card__new-price">25500 Р.</span>
               <div class="card__buttons">
-                <a href="#" class="card__button card__button--buy">Купить</a>
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
                 <a href="#" class="card__button card__button--bkm">В закладки</a>
               </div>
               <span class="card__new">Новинка</span>
             </article>
-            <article class="card">
+            <article class="card card--new">
               <img src="img/bosh_2000.png" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
               <h3 class="card__title">Перфоратор BOSCH BFG 2000</h3>
               <span class="card__old-price"></span>
               <span class="card__new-price">12500 Р.</span>
               <div class="card__buttons">
-                <a href="#" class="card__button card__button--buy">Купить</a>
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
                 <a href="#" class="card__button card__button--bkm">В закладки</a>
               </div>
               <span class="card__new">Новинка</span>
@@ -243,18 +259,28 @@
               <span class="card__old-price">22500 Р.</span>
               <span class="card__new-price">15500 Р.</span>
               <div class="card__buttons">
-                <a href="#" class="card__button card__button--buy">Купить</a>
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
                 <a href="#" class="card__button card__button--bkm">В закладки</a>
               </div>
               <span class="card__new">Новинка</span>
             </article>
-            <article class="card">
+            <article class="card card--new">
               <img src="img/bosh_6000.png" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
               <h3 class="card__title">Перфоратор BOSCH BFG 6000</h3>
               <span class="card__old-price">30500 Р.</span>
               <span class="card__new-price">25500 Р.</span>
               <div class="card__buttons">
-                <a href="#" class="card__button card__button--buy">Купить</a>
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
                 <a href="#" class="card__button card__button--bkm">В закладки</a>
               </div>
               <span class="card__new">Новинка</span>
@@ -265,7 +291,60 @@
               <span class="card__old-price"></span>
               <span class="card__new-price">12500 Р.</span>
               <div class="card__buttons">
-                <a href="#" class="card__button card__button--buy">Купить</a>
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
+                <a href="#" class="card__button card__button--bkm">В закладки</a>
+              </div>
+              <span class="card__new">Новинка</span>
+            </article>
+            <article class="card card--new">
+              <img src="img/bosh_2000.png" alt="Перфоратор BOSCH BFG 3000" width="218" height="170">
+              <h3 class="card__title">Перфоратор BOSCH BFG 3000</h3>
+              <span class="card__old-price">22500 Р.</span>
+              <span class="card__new-price">15500 Р.</span>
+              <div class="card__buttons">
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
+                <a href="#" class="card__button card__button--bkm">В закладки</a>
+              </div>
+              <span class="card__new">Новинка</span>
+            </article>
+            <article class="card">
+              <img src="img/bosh_6000.png" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
+              <h3 class="card__title">Перфоратор BOSCH BFG 6000</h3>
+              <span class="card__old-price">30500 Р.</span>
+              <span class="card__new-price">25500 Р.</span>
+              <div class="card__buttons">
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
+                <a href="#" class="card__button card__button--bkm">В закладки</a>
+              </div>
+              <span class="card__new">Новинка</span>
+            </article>
+            <article class="card">
+              <img src="img/bosh_2000.png" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">
+              <h3 class="card__title">Перфоратор BOSCH BFG 2000</h3>
+              <span class="card__old-price"></span>
+              <span class="card__new-price">12500 Р.</span>
+              <div class="card__buttons">
+                <a href="#" class="card__button card__button--buy">
+                  <svg class="card__icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15">
+                    <circle cx="4.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <circle cx="12.5" cy="13.5" r="1.5" fill="#ffffff" />
+                    <path d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z" fill="#ffffff" /></svg>
+                  Купить</a>
                 <a href="#" class="card__button card__button--bkm">В закладки</a>
               </div>
               <span class="card__new">Новинка</span>
@@ -373,13 +452,14 @@
   <section class="modal modal--purchase">
     <h2 class="visually-hidden">Действия с заказом</h2>
     <p class="modal__text">Товар добавлен в корзину!</p>
-    <div class="modal__wrapper">
+    <div class="modal__wrapper modal__wrapper--purchase">
       <a href="#" class="button button--accent">Оформить заказ</a>
       <button class="button button--transparent">Продолжить покупки</button>
     </div>
     <button class="modal__close-button" aria-label="Закрыть окно"></button>
   </section>
 
+  <script src="js/script.js"></script>
 </body>
 
 </html>
